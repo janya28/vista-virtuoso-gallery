@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// New custom colors for our AR/VR theme
+				cyber: {
+					dark: '#050A24',
+					blue: '#0B2E5C',
+					accent: '#05D9E8',
+					purple: '#4E0380',
+					highlight: '#FF2A6D',
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,29 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 5px #05D9E8, 0 0 15px #05D9E8' 
+					},
+					'50%': { 
+						boxShadow: '0 0 20px #05D9E8, 0 0 30px #05D9E8' 
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
